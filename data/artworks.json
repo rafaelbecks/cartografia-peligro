@@ -5,10 +5,31 @@
     "year": "2024",
     "artist": "Takayuki Todo",
     "image": "image/2_dog_leash.png",
-    "hotspot": { "x": 244, "y": 9, "width": 213, "height": 212 },
+    "hotspot": {
+      "x": 224,
+      "y": 565,
+      "width": 230,
+      "height": 197
+    },
     "tags": [
-      { "id": "descajanegrizacion", "hotspot": { "x": 240.5, "y": 305.5, "width": 185, "height": 23 } },
-      { "id": "circuit-bending", "hotspot": { "x": 240.5, "y": 333.5, "width": 124, "height": 23 } }
+      {
+        "id": "ambiguedad-obra-herramienta",
+        "hotspot": {
+          "x": 246.5,
+          "y": 223.5,
+          "width": 185,
+          "height": 23
+        }
+      },
+      {
+        "id": "descajanegrizacion",
+        "hotspot": {
+          "x": 246.5,
+          "y": 251.5,
+          "width": 124,
+          "height": 23
+        }
+      }
     ],
     "description": "Esta instalación presenta un perro robot autónomo diseñado para atacar. La única razón por la cual no puede hacerlo es porque está en estado de restricción, atado con una cadena. La obra muestra una función programada que no puede completarse, y pone en evidencia cómo una máquina puede ser programada para ejercer violencia.\n\nEl espectador se vincula con la obra no sólo a través de la contemplación: el autómata dirige su intención de ataque hacia donde este se encuentre. Un artefacto robótico que se comporta como si fuera un perro llevado con correa — un cuerpo mecánico en una relación de control ambigua. Lo revolucionario era que esas máquinas parecían tener personalidad; el observador siente empatía por una máquina al otorgarle voluntad, intención y estado.\n\nInstalación con robots que simulan un estado de animalidad violenta, retenidos por cadenas y una línea que delimita el paso y la \"seguridad\". El aspecto despojado da la sensación de estar expuestos al peligro de las máquinas.\n\nMateriales: tres perros robots comerciales fabricados por la empresa china Unitree."
   },
@@ -18,10 +39,31 @@
     "year": "2007–2010",
     "artist": "Ricardo Dominguez, Brett Stalbaum, Micha Cárdenas, Amy Sara Carroll y Electronic Disturbance Theater 2.0",
     "image": "image/048-Transborder-01-1608x1060.jpg",
-    "hotspot": { "x": 798, "y": 277, "width": 285, "height": 263 },
+    "hotspot": {
+      "x": 800,
+      "y": 269,
+      "width": 290,
+      "height": 275
+    },
     "tags": [
-      { "id": "descajanegrizacion", "hotspot": { "x": 805.5, "y": 550.5, "width": 59, "height": 23 } },
-      { "id": "ambiguedad-obra-herramienta", "hotspot": { "x": 871.5, "y": 550.5, "width": 185, "height": 23 } }
+      {
+        "id": "circuit-bending",
+        "hotspot": {
+          "x": 805.5,
+          "y": 550.5,
+          "width": 59,
+          "height": 23
+        }
+      },
+      {
+        "id": "ambiguedad-obra-herramienta",
+        "hotspot": {
+          "x": 871.5,
+          "y": 550.5,
+          "width": 185,
+          "height": 23
+        }
+      }
     ],
     "description": "Transborder Immigrant Tool fue un proyecto del colectivo Electronic Disturbance Theater 2.0 y Ricardo Dominguez. La obra consistía en una aplicación para teléfonos móviles económicos equipada con GPS, diseñada para ser utilizada en las zonas desérticas de la frontera entre México y Estados Unidos. Su objetivo principal era ayudar a localizar estaciones de agua, ofrecer orientación geográfica y reducir los riesgos asociados a las travesías migratorias.\n\nA diferencia de otras propuestas artísticas centradas en la representación, esta obra utilizaba la tecnología como herramienta de intervención directa sobre la realidad. Además de las funciones de navegación, el dispositivo reproducía poemas sonoros especialmente creados para acompañar el recorrido.\n\nEl proyecto generó una fuerte controversia pública y política. Más que representar una problemática, Transborder Immigrant Tool buscó actuar directamente sobre ella."
   },
@@ -31,10 +73,31 @@
     "year": "1960",
     "artist": "Jean Tinguely",
     "image": "image/1_homage_newyork.jpg",
-    "hotspot": { "x": 1174, "y": 434, "width": 222, "height": 212 },
+    "hotspot": {
+      "x": 1176,
+      "y": 433,
+      "width": 223,
+      "height": 216
+    },
     "tags": [
-      { "id": "circuit-bending", "hotspot": { "x": 1179.5, "y": 654.5, "width": 124, "height": 23 } },
-      { "id": "descajanegrizacion", "hotspot": { "x": 1179.5, "y": 682.5, "width": 185, "height": 23 } }
+      {
+        "id": "descajanegrizacion",
+        "hotspot": {
+          "x": 1179.5,
+          "y": 654.5,
+          "width": 124,
+          "height": 23
+        }
+      },
+      {
+        "id": "ambiguedad-obra-herramienta",
+        "hotspot": {
+          "x": 1179.5,
+          "y": 682.5,
+          "width": 185,
+          "height": 23
+        }
+      }
     ],
     "description": "El 17 de marzo de 1960, Jean Tinguely presentó en el jardín del Museum of Modern Art (MoMA) de Nueva York una máquina-escultura de 16 metros de longitud, construida en los días anteriores con chatarra de hierro y elementos encontrados en la basura — incluyendo un piano y una máquina de dibujos.\n\nAnte el público, la obra se autodestruyó, convirtiéndose en un homenaje de Tinguely al prototipo de ciudad, de los motores y de los movimientos mecánicos."
   },
@@ -44,10 +107,31 @@
     "year": "2009",
     "artist": "Sun Yuan y Peng Yu",
     "image": "image/Sun_Yuan-Peng_Yu-Room_Diseno-Freedom.jpg",
-    "hotspot": { "x": 927, "y": 589, "width": 237, "height": 235 },
+    "hotspot": {
+      "x": 20,
+      "y": 480,
+      "width": 205,
+      "height": 177
+    },
     "tags": [
-      { "id": "heteromatizacion", "hotspot": { "x": 932.5, "y": 835.5, "width": 185, "height": 23 } },
-      { "id": "descajanegrizacion", "hotspot": { "x": 1124.5, "y": 835.5, "width": 124, "height": 23 } }
+      {
+        "id": "ambiguedad-obra-herramienta",
+        "hotspot": {
+          "x": 932.5,
+          "y": 835.5,
+          "width": 185,
+          "height": 23
+        }
+      },
+      {
+        "id": "descajanegrizacion",
+        "hotspot": {
+          "x": 1124.5,
+          "y": 835.5,
+          "width": 124,
+          "height": 23
+        }
+      }
     ],
     "description": "Freedom consiste en una potente manguera contra incendios suspendida dentro de una gran estructura cerrada. A intervalos irregulares, una bomba hidráulica impulsa agua a alta presión a través de la manguera, provocando movimientos violentos e impredecibles. El dispositivo golpea las paredes, se retuerce, cambia de dirección y dispara chorros de agua por toda la habitación. No existe un objetivo visible ni un operador presente: solo una fuerza mecánica aparentemente autónoma que actúa dentro de un espacio del que no puede escapar.\n\nEl sonido de los impactos, la presión del agua y la agresividad de los movimientos convierten la instalación en una presencia amenazante. Aunque la máquina parece actuar con libertad absoluta, toda su energía permanece confinada dentro de una estructura diseñada para contenerla. El título introduce una paradoja central: la libertad aparece como potencia desatada, pero también como condición limitada por sistemas de control y restricciones materiales."
   },
@@ -57,9 +141,22 @@
     "year": "1970",
     "artist": "Edward Ihnatowicz",
     "image": "image/4_senster.jpg",
-    "hotspot": { "x": 19, "y": 462, "width": 202, "height": 195 },
+    "hotspot": {
+      "x": 246,
+      "y": 8,
+      "width": 212,
+      "height": 214
+    },
     "tags": [
-      { "id": "descajanegrizacion", "hotspot": { "x": 24.5, "y": 664.5, "width": 59, "height": 23 } }
+      {
+        "id": "circuit-bending",
+        "hotspot": {
+          "x": 24.5,
+          "y": 664.5,
+          "width": 59,
+          "height": 23
+        }
+      }
     ],
     "description": "Edward Ihnatowicz fue un escultor cibernético activo a finales de los años 1960 y principios de 1970. Sus esculturas exploran la interacción entre sus trabajos robóticos y el público; fue pionero en el uso de computadoras en el arte y, en especial, robots como arte.\n\nSAM fue la primera escultura móvil que se movía con autonomía y reconocía lo que sucedía a su alrededor, exhibida en Cybernetic Serendipity (ICA Londres, 1968).\n\nThe Senster, encargada por Philips para su puesto comercial permanente en Eindhoven, era un trabajo mucho más grande y ambicioso. Además de responder a las voces de la gente, también respondía a sus movimientos detectados por radar. Fue la primera escultura robótica controlada por un ordenador. Se estrenó en 1970 y permaneció en el programa hasta 1974, cuando fue desmantelada."
   },
@@ -69,10 +166,31 @@
     "year": "2024–2025",
     "artist": "Massive Attack, Robert Del Naja, Adam Curtis y United Visual Artists (UVA)",
     "image": "image/massive.webp",
-    "hotspot": { "x": 221, "y": 567, "width": 232, "height": 195 },
+    "hotspot": {
+      "x": 462,
+      "y": 527,
+      "width": 277,
+      "height": 216
+    },
     "tags": [
-      { "id": "descajanegrizacion", "hotspot": { "x": 226.5, "y": 768.5, "width": 153, "height": 23 } },
-      { "id": "heteromatizacion", "hotspot": { "x": 226.5, "y": 796.5, "width": 124, "height": 23 } }
+      {
+        "id": "circuit-bending",
+        "hotspot": {
+          "x": 226.5,
+          "y": 768.5,
+          "width": 153,
+          "height": 23
+        }
+      },
+      {
+        "id": "descajanegrizacion",
+        "hotspot": {
+          "x": 226.5,
+          "y": 796.5,
+          "width": 124,
+          "height": 23
+        }
+      }
     ],
     "description": "Las visuales desarrolladas por Massive Attack junto a Robert Del Naja, Adam Curtis y United Visual Artists exploran tecnologías contemporáneas de vigilancia, reconocimiento facial y extracción de datos. A través de imágenes generativas y sistemas de clasificación en tiempo real, el público ocupa simultáneamente el rol de observador y observado.\n\nRostros, perfiles y categorías aparecen proyectados en escena, evidenciando cómo las tecnologías digitales detectan, identifican y organizan información sobre las personas. La obra pone en evidencia mecanismos asociados al aprendizaje automático, donde datos, algoritmos y modelos estadísticos se combinan para producir sistemas de clasificación cada vez más sofisticados — mostrando el poder de estas herramientas sin revelar completamente cómo funcionan.\n\nMás que celebrar la innovación tecnológica, la obra invita a reflexionar sobre los sesgos y relaciones de poder que atraviesan la inteligencia artificial."
   },
@@ -82,9 +200,22 @@
     "year": "2016",
     "artist": "Sun Yuan y Peng Yu",
     "image": "image/canthelpmyself.webp",
-    "hotspot": { "x": 457, "y": 522, "width": 281, "height": 219 },
+    "hotspot": {
+      "x": 929,
+      "y": 588,
+      "width": 238,
+      "height": 238
+    },
     "tags": [
-      { "id": "heteromatizacion", "hotspot": { "x": 462.5, "y": 750.5, "width": 124, "height": 23 } }
+      {
+        "id": "descajanegrizacion",
+        "hotspot": {
+          "x": 462.5,
+          "y": 750.5,
+          "width": 124,
+          "height": 23
+        }
+      }
     ],
     "description": "Can't Help Myself consiste en un brazo robótico industrial encerrado tras una barrera de vidrio que intenta contener un líquido rojo que se derrama constantemente sobre el suelo. Programada para mantener el fluido dentro de una zona delimitada, la máquina detecta las fugas y responde empujando el líquido de regreso hacia el centro. Sin embargo, la tarea nunca concluye: cada movimiento genera nuevos derrames y el ciclo vuelve a comenzar.\n\nLa instalación presenta un espacio frío y clínico donde destaca el contraste entre la maquinaria industrial y el intenso color rojo del líquido. Aunque los artistas nunca afirmaron explícitamente que se trate de sangre, la obra evoca asociaciones con la violencia, el trabajo, el control y la imposibilidad de borrar ciertas huellas.\n\nFrente a los relatos optimistas sobre la inteligencia artificial, Can't Help Myself muestra una máquina eficiente pero incapaz de resolver el problema para el que fue diseñada."
   }

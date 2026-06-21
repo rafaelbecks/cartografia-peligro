@@ -1,6 +1,6 @@
 import { loadArtworks } from "./artworks.js";
 import { mountCartography } from "./cartography.js";
-import { closeModal, openArtworkModal, openTagModal } from "./modal.js";
+import { openArtworkModal, openTagModal } from "./modal.js";
 import { loadTags } from "./tags.js";
 
 async function init() {
@@ -14,7 +14,6 @@ async function init() {
 
   await mountCartography(cartographyRoot, {
     artworks,
-    tagsById,
     onArtworkSelect(artworkId) {
       const artwork = byId.get(artworkId);
 
@@ -36,8 +35,6 @@ async function init() {
       openTagModal(modalRoot, tag);
     },
   });
-
-  window.addEventListener("popstate", () => closeModal(modalRoot));
 }
 
 init().catch((error) => {

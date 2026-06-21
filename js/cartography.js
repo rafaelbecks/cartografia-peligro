@@ -1,4 +1,4 @@
-function createRectHotspot(svg, { className, dataset, hotspot, ariaLabel, onSelect }) {
+function createRectHotspot({ className, dataset, hotspot, onSelect }) {
   const ns = "http://www.w3.org/2000/svg";
   const rect = document.createElementNS(ns, "rect");
 
@@ -13,63 +13,71 @@ function createRectHotspot(svg, { className, dataset, hotspot, ariaLabel, onSele
   rect.setAttribute("height", hotspot.height);
   rect.setAttribute("fill", "transparent");
   rect.setAttribute("pointer-events", "all");
-  rect.setAttribute("role", "button");
-  rect.setAttribute("tabindex", "0");
-  rect.setAttribute("aria-label", ariaLabel);
   rect.style.cursor = "pointer";
 
   rect.addEventListener("click", (event) => {
+    event.preventDefault();
     event.stopPropagation();
     onSelect();
-  });
-
-  rect.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      onSelect();
-    }
   });
 
   return rect;
 }
 
-function createHotspotLayer(svg, artworks, tagsById, { onArtworkSelect, onTagSelect }) {
+function createHotspotLayer(mount, artworks, { onArtworkSelect, onTagSelect }) {
   const ns = "http://www.w3.org/2000/svg";
   const layer = document.createElementNS(ns, "g");
   layer.setAttribute("id", "cartography-hotspots");
 
   artworks.forEach((artwork) => {
     layer.append(
-      createRectHotspot(svg, {
+      createRectHotspot({
         className: "artwork-hit",
         dataset: { artworkId: artwork.id },
         hotspot: artwork.hotspot,
-        ariaLabel: artwork.title,
         onSelect: () => onArtworkSelect(artwork.id),
       })
     );
+  });
 
+  artworks.forEach((artwork) => {
     (artwork.tags ?? []).forEach((tag) => {
-      const tagData = tagsById.get(tag.id);
       layer.append(
-        createRectHotspot(svg, {
+        createRectHotspot({
           className: "tag-hit",
           dataset: { tagId: tag.id },
           hotspot: tag.hotspot,
-          ariaLabel: tagData?.title ?? tag.id,
           onSelect: () => onTagSelect(tag.id),
         })
       );
     });
   });
 
-  const mount = svg.querySelector("[clip-path]") ?? svg;
   mount.append(layer);
+}
+
+function prepareSvgViewport(svg) {
+  const contentGroup = svg.querySelector("[clip-path]") ?? svg;
+
+  contentGroup.removeAttribute("clip-path");
+
+  const background = svg.querySelector('rect[fill="url(#paint0_radial_2195_228)"]');
+
+  if (background) {
+    background.setAttribute("x", "-3000");
+    background.setAttribute("y", "-3000");
+    background.setAttribute("width", "7440");
+    background.setAttribute("height", "6900");
+  }
+
+  svg.setAttribute("overflow", "visible");
+
+  return contentGroup;
 }
 
 export async function mountCartography(
   container,
-  { artworks, tagsById, onArtworkSelect, onTagSelect }
+  { artworks, onArtworkSelect, onTagSelect }
 ) {
   const response = await fetch("./cartografia.svg");
 
@@ -91,9 +99,10 @@ export async function mountCartography(
   svg.removeAttribute("height");
   svg.setAttribute("role", "img");
   svg.setAttribute("aria-label", "Cartografía de obras artísticas");
-  svg.style.cursor = "default";
 
-  createHotspotLayer(svg, artworks, tagsById, { onArtworkSelect, onTagSelect });
+  const contentGroup = prepareSvgViewport(svg);
+
+  createHotspotLayer(contentGroup, artworks, { onArtworkSelect, onTagSelect });
 
   return svg;
 }

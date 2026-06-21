@@ -10,7 +10,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #f7f7f7;
+  background: #f1bebe;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #1e1e1e;
 }
@@ -23,12 +23,19 @@ body {
 .cartography {
   width: 100%;
   height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.cartography svg:focus {
+  outline: none;
 }
 
 .cartography svg {
   display: block;
   width: 100%;
   height: 100%;
+  overflow: visible;
   cursor: default;
 }
 
@@ -36,4 +43,10 @@ body {
 .cartography .tag-hit {
   cursor: pointer;
   pointer-events: all;
+  outline: none;
+}
+
+.cartography .artwork-hit:focus,
+.cartography .tag-hit:focus {
+  outline: none;
 }

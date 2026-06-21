@@ -1,8 +1,6 @@
-const CLOSE_MS = 280;
-
-function createOverlay({ labelledBy, onClose, content, variant = "artwork" }) {
+function createOverlay({ labelledBy, onClose, content }) {
   const overlay = document.createElement("div");
-  overlay.className = `modal-overlay modal-overlay--${variant}`;
+  overlay.className = "modal-overlay";
   overlay.setAttribute("role", "dialog");
   overlay.setAttribute("aria-modal", "true");
   overlay.setAttribute("aria-labelledby", labelledBy);
@@ -15,20 +13,10 @@ function createOverlay({ labelledBy, onClose, content, variant = "artwork" }) {
 
   const controller = new AbortController();
   const { signal } = controller;
-  let closing = false;
 
   const close = () => {
-    if (closing) {
-      return;
-    }
-
-    closing = true;
     controller.abort();
-    overlay.classList.add("modal-overlay--closing");
-
-    window.setTimeout(() => {
-      onClose?.();
-    }, CLOSE_MS);
+    onClose?.();
   };
 
   const closeButton = content.querySelector(".modal__close");
@@ -44,10 +32,6 @@ function createOverlay({ labelledBy, onClose, content, variant = "artwork" }) {
     },
     { signal }
   );
-
-  requestAnimationFrame(() => {
-    overlay.classList.add("modal-overlay--visible");
-  });
 
   return overlay;
 }
@@ -169,7 +153,6 @@ export function openArtworkModal(root, artwork) {
   root.replaceChildren(
     createOverlay({
       labelledBy: "modal-title",
-      variant: "artwork",
       content,
       onClose: () => closeModal(root),
     })
@@ -184,7 +167,6 @@ export function openTagModal(root, tag) {
   root.replaceChildren(
     createOverlay({
       labelledBy: "modal-tag-title",
-      variant: "tag",
       content,
       onClose: () => closeModal(root),
     })
