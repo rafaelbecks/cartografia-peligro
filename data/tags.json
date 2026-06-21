@@ -1,0 +1,40 @@
+[
+  {
+    "id": "descajanegrizacion",
+    "title": "Descajanegrización",
+    "description": "La descajanegrización refiere a las prácticas que buscan revelar los mecanismos internos de los sistemas técnicos opacos. Frente a la lógica de la \"caja negra\", donde el funcionamiento de los dispositivos permanece oculto e inaccesible para sus usuarios (Hertz & Parikka, 2012), estas estrategias desmontan, exponen y problematizan la infraestructura material, algorítmica y política de las tecnologías contemporáneas. Más que utilizar herramientas, se trata de interrogarlas y hacer visibles las relaciones de poder inscritas en ellas.",
+    "references": [
+      { "label": "Hertz & Parikka (2012)", "url": null }
+    ]
+  },
+  {
+    "id": "circuit-bending",
+    "title": "Circuit Bending y Hacking",
+    "description": "El circuit bending y el hacking constituyen prácticas de intervención material sobre dispositivos tecnológicos que desafían sus usos previstos. A través del error, la modificación y la reutilización, recuperan formas de experimentación técnica cercanas al bricolaje y al \"cirujeo tecnológico\", funcionando como un contrapunto a la visión de la innovación promovida por la Ideología Californiana (Barbrook & Cameron). Estas metodologías desplazan la atención desde el consumo de tecnologías cerradas hacia la apropiación crítica de sus infraestructuras.",
+    "references": [
+      { "label": "Barbrook & Cameron — Ideología Californiana", "url": null }
+    ]
+  },
+  {
+    "id": "ambiguedad-obra-herramienta",
+    "title": "Ambigüedad entre Obra y Herramienta",
+    "description": "Algunas prácticas artísticas contemporáneas desdibujan los límites entre obra, dispositivo y herramienta. En estos casos, el objeto artístico no se presenta únicamente como representación o experiencia estética, sino también como una tecnología operativa capaz de intervenir en contextos sociales y políticos concretos. Ejemplos como Transborder Immigrant Tool muestran cómo una herramienta funcional puede convertirse simultáneamente en obra crítica, activismo e infraestructura de apoyo, poniendo en tensión las categorías tradicionales del arte y la tecnología.",
+    "references": [
+      {
+        "label": "Transborder Immigrant Tool",
+        "url": "https://anthology.rhizome.org/transborder-immigrant-tool"
+      }
+    ]
+  },
+  {
+    "id": "heteromatizacion",
+    "title": "Heteromatización y Trabajo Fantasma",
+    "description": "La heteromatización describe aquellos procesos tecnológicos que dependen del trabajo humano oculto para sostener la aparente autonomía de los sistemas automatizados. Frente a las narrativas que presentan la inteligencia artificial como un mecanismo autosuficiente, esta perspectiva señala las redes de extracción de datos, clasificación y trabajo precarizado que hacen posible su funcionamiento (Pasquinelli & Joler, 2021). La automatización aparece así como una redistribución desigual del trabajo más que como su desaparición, revelando las dimensiones sociales y económicas invisibilizadas detrás de la infraestructura digital.",
+    "references": [
+      {
+        "label": "Pasquinelli & Joler — The Nooscope Manifested (2021)",
+        "url": "https://networkcultures.org/blog/publication/the-nooscope-manifested-artificial-intelligence-as-instrument-of-knowledge-extractivism/"
+      }
+    ]
+  }
+]
