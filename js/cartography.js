@@ -24,6 +24,18 @@ function createRectHotspot({ className, dataset, hotspot, onSelect }) {
   return rect;
 }
 
+function getTagHotspots(tag) {
+  if (tag.hotspots?.length) {
+    return tag.hotspots;
+  }
+
+  if (tag.hotspot) {
+    return [tag.hotspot];
+  }
+
+  return [];
+}
+
 function createHotspotLayer(mount, artworks, tags, { onArtworkSelect, onTagSelect }) {
   const ns = "http://www.w3.org/2000/svg";
   const layer = document.createElementNS(ns, "g");
@@ -40,32 +52,17 @@ function createHotspotLayer(mount, artworks, tags, { onArtworkSelect, onTagSelec
     );
   });
 
-  artworks.forEach((artwork) => {
-    (artwork.tags ?? []).forEach((tag) => {
+  tags.forEach((tag) => {
+    getTagHotspots(tag).forEach((hotspot) => {
       layer.append(
         createRectHotspot({
           className: "tag-hit",
           dataset: { tagId: tag.id },
-          hotspot: tag.hotspot,
+          hotspot,
           onSelect: () => onTagSelect(tag.id),
         })
       );
     });
-  });
-
-  tags.forEach((tag) => {
-    if (!tag.hotspot) {
-      return;
-    }
-
-    layer.append(
-      createRectHotspot({
-        className: "tag-hit",
-        dataset: { tagId: tag.id },
-        hotspot: tag.hotspot,
-        onSelect: () => onTagSelect(tag.id),
-      })
-    );
   });
 
   mount.append(layer);

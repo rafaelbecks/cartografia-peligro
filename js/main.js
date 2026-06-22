@@ -3,6 +3,13 @@ import { mountCartography } from "./cartography.js";
 import { openArtworkModal, openTagModal } from "./modal.js";
 import { loadTags } from "./tags.js";
 
+function resolveArtworkTags(tagIds, tagsById) {
+  return (tagIds ?? [])
+    .map((entry) => (typeof entry === "string" ? entry : entry.id))
+    .map((tagId) => tagsById.get(tagId))
+    .filter(Boolean);
+}
+
 async function init() {
   const cartographyRoot = document.getElementById("cartography");
   const modalRoot = document.getElementById("modal-root");
@@ -24,9 +31,7 @@ async function init() {
       }
 
       openArtworkModal(modalRoot, artwork, {
-        tags: (artwork.tags ?? [])
-          .map((entry) => tagsById.get(entry.id))
-          .filter(Boolean),
+        tags: resolveArtworkTags(artwork.tags, tagsById),
         onTagSelect(tag) {
           openTagModal(modalRoot, tag);
         },
