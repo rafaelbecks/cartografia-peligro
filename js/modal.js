@@ -124,7 +124,9 @@ function createReferencesList(references) {
 
 function createTagModalContent(tag) {
   const modal = document.createElement("article");
-  modal.className = "modal modal--tag";
+  modal.className = tag.image
+    ? "modal modal--tag modal--tag-with-image"
+    : "modal modal--tag";
 
   const title = document.createElement("h2");
   title.id = "modal-tag-title";
@@ -136,6 +138,36 @@ function createTagModalContent(tag) {
   description.textContent = tag.description;
 
   const references = createReferencesList(tag.references);
+
+  if (tag.image) {
+    const layout = document.createElement("div");
+    layout.className = "modal__layout modal__layout--tag";
+
+    const text = document.createElement("div");
+    text.className = "modal__content modal__content--tag";
+    text.append(title, description);
+    if (references) {
+      text.append(references);
+    }
+
+    const media = document.createElement("div");
+    media.className = "modal__media modal__media--tag";
+
+    const image = document.createElement("img");
+    image.className = "modal__image";
+    if (tag.imageInverted) {
+      image.classList.add("modal__image--inverted");
+    }
+    image.src = tag.image;
+    image.alt = tag.title;
+    image.loading = "eager";
+    image.decoding = "async";
+
+    media.append(image);
+    layout.append(text, media);
+    modal.append(createCloseButton(), layout);
+    return modal;
+  }
 
   modal.append(createCloseButton(), title, description);
   if (references) {

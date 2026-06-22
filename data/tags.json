@@ -30,10 +30,35 @@
     "id": "heteromatizacion",
     "title": "Heteromatización y Trabajo Fantasma",
     "description": "La heteromatización describe aquellos procesos tecnológicos que dependen del trabajo humano oculto para sostener la aparente autonomía de los sistemas automatizados. Frente a las narrativas que presentan la inteligencia artificial como un mecanismo autosuficiente, esta perspectiva señala las redes de extracción de datos, clasificación y trabajo precarizado que hacen posible su funcionamiento (Pasquinelli & Joler, 2021). La automatización aparece así como una redistribución desigual del trabajo más que como su desaparición, revelando las dimensiones sociales y económicas invisibilizadas detrás de la infraestructura digital.",
+    "hotspot": {
+      "x": 462,
+      "y": 487,
+      "width": 115,
+      "height": 23
+    },
     "references": [
       {
         "label": "Pasquinelli & Joler — The Nooscope Manifested (2021)",
         "url": "https://networkcultures.org/blog/publication/the-nooscope-manifested-artificial-intelligence-as-instrument-of-knowledge-extractivism/"
+      }
+    ]
+  },
+  {
+    "id": "valle-inquietante",
+    "title": "Valle Inquietante (Uncanny Valley)",
+    "description": "El valle inquietante, propuesto por Masahiro Mori en 1970, describe la zona de ambigüedad que aparece cuando una entidad artificial se aproxima a las características de un ser vivo sin llegar a ser plenamente humana. En lugar de generar empatía, esta proximidad produce inquietud, extrañamiento o rechazo. Más que un fenómeno psicológico aislado, el concepto permite pensar las tensiones que surgen cuando las fronteras entre organismo, máquina y simulación se vuelven difusas. En el contexto de las tecnologías contemporáneas, el valle inquietante funciona como un indicador de la fragilidad de las categorías que separan lo vivo de lo no vivo, revelando cómo la imitación técnica de la vida puede desestabilizar nuestras formas de percepción e identificación. En el arte y los medios digitales, estas fricciones suelen utilizarse para problematizar la relación entre cuerpos, máquinas y sistemas autónomos, haciendo visible aquello que permanece extraño dentro de lo aparentemente familiar.",
+    "image": "image/uncanny-valley.png",
+    "imageInverted": true,
+    "hotspot": {
+      "x": 231,
+      "y": 487,
+      "width": 109,
+      "height": 23
+    },
+    "references": [
+      {
+        "label": "Masahiro Mori — The Uncanny Valley",
+        "url": "https://spectrum.ieee.org/the-uncanny-valley"
       }
     ]
   }

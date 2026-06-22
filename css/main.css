@@ -10,7 +10,13 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #f1bebe;
+  background-color: #f1bebe;
+  background-image: radial-gradient(
+    ellipse 68.58% 76.33% at 50% 50%,
+    #e96d6c 60.6557%,
+    #f1bebe 100%
+  );
+  background-attachment: fixed;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #1e1e1e;
 }
@@ -18,6 +24,7 @@ body {
 .app {
   width: 100vw;
   height: 100vh;
+  background: inherit;
 }
 
 .cartography {

@@ -58,6 +58,30 @@
   overflow-y: auto;
 }
 
+.modal--tag-with-image {
+  width: min(960px, 92vw);
+  height: min(560px, 88vh);
+  max-height: min(560px, 88vh);
+  padding: 0;
+  overflow: hidden;
+}
+
+.modal__layout--tag {
+  height: 100%;
+}
+
+.modal__content--tag {
+  padding: 2.25rem 2rem 2rem;
+}
+
+.modal__media--tag {
+  padding: 2.25rem 2rem 2rem 1.5rem;
+}
+
+.modal__image--inverted {
+  filter: invert(1);
+}
+
 .modal__close {
   position: absolute;
   top: 1rem;
@@ -225,6 +249,33 @@
     width: 100%;
     max-height: min(88vh, 100%);
     padding: 2.75rem 1.25rem 1.5rem;
+  }
+
+  .modal--tag-with-image {
+    width: 100%;
+    height: auto;
+    max-height: min(92vh, 100%);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modal__layout--tag {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .modal__content--tag {
+    padding: 1.25rem 1.25rem 1.5rem;
+    overflow: visible;
+  }
+
+  .modal__media--tag {
+    order: -1;
+    flex-shrink: 0;
+    padding: 2.75rem 1rem 0.75rem;
+    max-height: 42vh;
   }
 
   .modal__title--tag {

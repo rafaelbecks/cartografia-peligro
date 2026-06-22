@@ -7,13 +7,14 @@ async function init() {
   const cartographyRoot = document.getElementById("cartography");
   const modalRoot = document.getElementById("modal-root");
 
-  const [{ list: artworks, byId }, tagsById] = await Promise.all([
+  const [{ list: artworks, byId }, { list: tags, byId: tagsById }] = await Promise.all([
     loadArtworks(),
     loadTags(),
   ]);
 
   await mountCartography(cartographyRoot, {
     artworks,
+    tags,
     onArtworkSelect(artworkId) {
       const artwork = byId.get(artworkId);
 

@@ -6,5 +6,8 @@ export async function loadTags() {
   }
 
   const tags = await response.json();
-  return new Map(tags.map((tag) => [tag.id, tag]));
+  return {
+    list: tags,
+    byId: new Map(tags.map((tag) => [tag.id, tag])),
+  };
 }

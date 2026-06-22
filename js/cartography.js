@@ -24,7 +24,7 @@ function createRectHotspot({ className, dataset, hotspot, onSelect }) {
   return rect;
 }
 
-function createHotspotLayer(mount, artworks, { onArtworkSelect, onTagSelect }) {
+function createHotspotLayer(mount, artworks, tags, { onArtworkSelect, onTagSelect }) {
   const ns = "http://www.w3.org/2000/svg";
   const layer = document.createElementNS(ns, "g");
   layer.setAttribute("id", "cartography-hotspots");
@@ -53,6 +53,21 @@ function createHotspotLayer(mount, artworks, { onArtworkSelect, onTagSelect }) {
     });
   });
 
+  tags.forEach((tag) => {
+    if (!tag.hotspot) {
+      return;
+    }
+
+    layer.append(
+      createRectHotspot({
+        className: "tag-hit",
+        dataset: { tagId: tag.id },
+        hotspot: tag.hotspot,
+        onSelect: () => onTagSelect(tag.id),
+      })
+    );
+  });
+
   mount.append(layer);
 }
 
@@ -61,7 +76,7 @@ function prepareSvgViewport(svg) {
 
   contentGroup.removeAttribute("clip-path");
 
-  const background = svg.querySelector('rect[fill="url(#paint0_radial_2195_228)"]');
+  const background = svg.querySelector('rect[fill^="url(#paint0_radial"]');
 
   if (background) {
     background.setAttribute("x", "-3000");
@@ -77,7 +92,7 @@ function prepareSvgViewport(svg) {
 
 export async function mountCartography(
   container,
-  { artworks, onArtworkSelect, onTagSelect }
+  { artworks, tags, onArtworkSelect, onTagSelect }
 ) {
   const response = await fetch("./cartografia.svg");
 
@@ -100,9 +115,9 @@ export async function mountCartography(
   svg.setAttribute("role", "img");
   svg.setAttribute("aria-label", "Cartografía de obras artísticas");
 
-  const contentGroup = prepareSvgViewport(svg);
+  prepareSvgViewport(svg);
 
-  createHotspotLayer(contentGroup, artworks, { onArtworkSelect, onTagSelect });
+  createHotspotLayer(svg, artworks, tags, { onArtworkSelect, onTagSelect });
 
   return svg;
 }
