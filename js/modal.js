@@ -45,7 +45,30 @@ function createCloseButton() {
   return closeButton;
 }
 
-function createArtworkModalContent(artwork) {
+function createArtworkTags(tags, onTagSelect) {
+  if (!tags?.length || !onTagSelect) {
+    return null;
+  }
+
+  const container = document.createElement("div");
+  container.className = "modal__tags";
+
+  tags.forEach((tag) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "modal__tag";
+    button.textContent = tag.title;
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      onTagSelect(tag);
+    });
+    container.append(button);
+  });
+
+  return container;
+}
+
+function createArtworkModalContent(artwork, tags, onTagSelect) {
   const modal = document.createElement("article");
   modal.className = "modal modal--artwork";
 
@@ -74,11 +97,17 @@ function createArtworkModalContent(artwork) {
   title.className = "modal__title";
   title.textContent = artwork.title;
 
+  const tagList = createArtworkTags(tags, onTagSelect);
+
   const description = document.createElement("div");
   description.className = "modal__description";
   description.textContent = artwork.description;
 
-  text.append(meta, title, description);
+  text.append(meta, title);
+  if (tagList) {
+    text.append(tagList);
+  }
+  text.append(description);
   media.append(image);
   layout.append(text, media);
   modal.append(createCloseButton(), layout);
@@ -177,11 +206,11 @@ function createTagModalContent(tag) {
   return modal;
 }
 
-export function openArtworkModal(root, artwork) {
+export function openArtworkModal(root, artwork, { tags = [], onTagSelect } = {}) {
   document.body.style.overflow = "hidden";
   root.hidden = false;
 
-  const content = createArtworkModalContent(artwork);
+  const content = createArtworkModalContent(artwork, tags, onTagSelect);
   root.replaceChildren(
     createOverlay({
       labelledBy: "modal-title",

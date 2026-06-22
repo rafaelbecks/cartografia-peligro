@@ -23,7 +23,14 @@ async function init() {
         return;
       }
 
-      openArtworkModal(modalRoot, artwork);
+      openArtworkModal(modalRoot, artwork, {
+        tags: (artwork.tags ?? [])
+          .map((entry) => tagsById.get(entry.id))
+          .filter(Boolean),
+        onTagSelect(tag) {
+          openTagModal(modalRoot, tag);
+        },
+      });
     },
     onTagSelect(tagId) {
       const tag = tagsById.get(tagId);
